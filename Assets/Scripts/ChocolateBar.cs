@@ -14,7 +14,7 @@ public class ChocolateBar : Interactable {
 		
 	}
 
-	public override void onInteract() {
+	public override void onInteract(Player player) {
 		Debug.Log("You are picking up a chocolate bar");
 	}
 }

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteract : MonoBehaviour {
+public class Player : MonoBehaviour {
 	public Camera cam;
 	public float radius = 2.0f;
+	public ArrayList inventory;
 
 	// Use this for initialization
 	void Start () {
-		
+		inventory = new ArrayList();
 	}
 	
 	// Update is called once per frame
@@ -21,13 +22,25 @@ public class PlayerInteract : MonoBehaviour {
 				Interactable item = hit.collider.GetComponent<Interactable>();
 
 				if(item != null) {
-					item.onInteract();
+					item.onInteract(this);
 				} else {
 					Debug.Log("Hit something that isn't interactive");
 				}
 			} else {
 				Debug.Log("Nothing in range");
 			}
+		}
+	}
+
+	public void addInventoryItem(string toAdd) {
+		inventory.Add(toAdd);
+
+		printInventory();
+	}
+
+	private void printInventory() {
+		foreach(string item in inventory) {
+			Debug.Log("Item: " + item);
 		}
 	}
 }
