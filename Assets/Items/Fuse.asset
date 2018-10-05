@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e72c96e8a314430abf1311fc8ea0cf, type: 3}
   m_Name: Fuse
   m_EditorClassIdentifier: 
-  itemName: Item Name
-  itemIcon: {fileID: 0}
-  itemDropPrefab: {fileID: 0}
+  itemName: Fuse
+  itemIcon: {fileID: 2800000, guid: 883ca45820c7c432a805ee3767e1e1e5, type: 3}
+  itemDropPrefab: {fileID: 1792178930723958, guid: 414873e35445146b8a9d27809ba1a3b8,
+    type: 2}
