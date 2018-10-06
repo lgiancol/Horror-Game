@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GUI : MonoBehaviour {
-	public GameObject inventoryHolder;
+	public InventoryManager inventoryManager;
 
 	// Use this for initialization
 	void Start () {
@@ -14,15 +14,5 @@ public class GUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-	}
-
-	public void updateInventory(PlayerInventory inv) {
-		int childCount = inv.getItemCount();
-
-		for(int i = 0; i < childCount; i++) {
-			Transform child = inventoryHolder.transform.GetChild(i);
-
-			child.GetComponentInChildren<RawImage>().texture = inv.getItem(i).itemIcon;
-		}
 	}
 }

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inventory = new PlayerInventory();
+		gui.inventoryManager.updateInventory(inventory);
 	}
 	
 	// Update is called once per frame
@@ -22,13 +23,9 @@ public class Player : MonoBehaviour {
 			if(Physics.Raycast(ray, out hit, radius)) {
 				Interactable item = hit.collider.GetComponent<Interactable>();
 
-				if(item != null) {
+				if(item != null && item.isActive) {
 					item.onInteract(this);
-				} else {
-					Debug.Log("Hit something that isn't interactive");
 				}
-			} else {
-				Debug.Log("Nothing in range");
 			}
 		} else if(Input.GetKeyDown("1")) {
 			inventory.setActiveIndex(0);
@@ -45,8 +42,11 @@ public class Player : MonoBehaviour {
 
 	public void addInventoryItem(InventoryItem toAdd) {
 		inventory.addItem(toAdd);
-		gui.updateInventory(inventory);
+		gui.inventoryManager.updateInventory(inventory);
+	}
 
-		inventory.print();
+	public void removeActiveItem() {
+		inventory.removeActiveItem();
+		gui.inventoryManager.updateInventory(inventory);
 	}
 }
