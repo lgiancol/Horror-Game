@@ -8,8 +8,6 @@ public class InventoryManager : MonoBehaviour {
 		for(int i = 0; i < childCount; i++) {
 			Transform child = this.transform.GetChild(i);
 
-			InventoryItem item = inv.getItem(i);
-
 			child.GetComponentInChildren<RawImage>().texture = inv.getItem(i).itemIcon;
 		}
 	}

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Fuse : Interactable {
 	public override void onInteract(Player player) {
-		Debug.Log("Pickup the fuse and add to " + player.name);
 		player.addInventoryItem(this.inventoryItem);
 		Destroy(this.gameObject);
 	}

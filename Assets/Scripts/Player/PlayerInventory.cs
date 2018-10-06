@@ -29,15 +29,12 @@ public class PlayerInventory {
 
 	public void addEmptyItem(int index) {
 		items[index] = (EmptyInventoryItem) ScriptableObject.CreateInstance("EmptyInventoryItem");
-
-		print();
 	}
 
 	public bool addItem(InventoryItem toAdd) {
 		if(isFull)
 			return false;
 
-		Debug.Log("ItemCount: " + itemCount);
 		items[itemCount] = toAdd;
 		itemCount++;
 
@@ -51,8 +48,6 @@ public class PlayerInventory {
 
 	public void setActiveIndex(int index) {
 		activeIndex = index;
-
-		Debug.Log("Active inventory index: " + activeIndex);
 	}
 
 	public void print() {
