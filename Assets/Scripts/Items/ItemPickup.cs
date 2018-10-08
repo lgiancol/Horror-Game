@@ -11,8 +11,8 @@ public class ItemPickup : InteractableItem {
 	}
 
 	private void pickupItem() {
-		 if(Inventory.instance.add(this.item)) {
-			Destroy(this.gameObject);
-		 }
+		if(Inventory.instance.add(this.item)) {
+		Destroy(this.gameObject);
+		}
 	}
 }

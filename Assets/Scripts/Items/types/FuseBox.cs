@@ -13,6 +13,8 @@ public class FuseBox : InteractableItem {
 			fuse.GetComponent<InteractableItem>().isActive = false;
 
 			Inventory.instance.remove(activeItem);
+
+			this.isActive = false;
 		}
 	}
 }

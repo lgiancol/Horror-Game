@@ -48,8 +48,6 @@ public class Inventory : MonoBehaviour {
 
 	// Get the item in the inventory for the slot this is active
 	public Item getActiveItem() {
-		Debug.Log("Count: " + this.items.Count);
-		Debug.Log("Active Item: " + this.activeItem);
 		if(this.items.Count > 0 && this.items.Count >= this.activeItem) {
 			return this.items[this.activeItem];
 		}
