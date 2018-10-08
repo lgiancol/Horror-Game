@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	public ActionPanelUI actionPanelUI;
 
 	private ItemDetector itemDetector;
-	private InteractableItem itemBeingViewed;
+	private InteractableItem activeItem; // The item that you are looking at
 
 	void Start() {
 		itemDetector = new ItemDetector();
@@ -15,13 +15,13 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.itemBeingViewed = itemDetector.checkItemDetected(cam);
+		this.activeItem = itemDetector.checkItemDetected(cam);
 
 		// If we are looking at an item we can pickup
-		if(itemBeingViewed != null) {
+		if(activeItem != null) {
 			// If we haven't already set a message and the item we are looking at is active set the text
-			if(actionPanelUI.messageSet == false && itemBeingViewed.isActive) {
-				actionPanelUI.setActionText(itemBeingViewed.interactText);
+			if(activeItem.canInteract && actionPanelUI.messageSet == false && activeItem.isActive) {
+				actionPanelUI.setActionText(activeItem.interactText);
 			}
 		} else {
 			// If we aren't looking at an item we can pickup and the message is already set
@@ -37,8 +37,8 @@ public class Player : MonoBehaviour {
 			// if(Physics.Raycast(ray, out hit, radius)) {
 			// 	InteractableItem item = hit.collider.GetComponent<InteractableItem>();
 
-			if(itemBeingViewed != null && itemBeingViewed.isActive) {
-				itemBeingViewed.onInteract();
+			if(activeItem != null && activeItem.isActive) {
+				activeItem.onInteract();
 			}
 			// }
 		} else if(Input.GetKeyDown("1")) {
