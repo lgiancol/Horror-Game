@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GUI : MonoBehaviour {
-	public InventoryManager inventoryManager;
+public class ChocolateBar : InteractableItem {
 
 	// Use this for initialization
 	void Start () {
@@ -14,5 +12,9 @@ public class GUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public override void onInteract() {
+		Debug.Log("You are picking up a chocolate bar");
 	}
 }
