@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour {
 
 	public static Inventory instance;
 
+	/* Awake is only called once during the lifetime of this script. This is so we can set an
+		instance of this class so it can be used throughout the entire game */
 	public void Awake() {
 		if(instance != null) {
 			Debug.LogWarning("There is already another inventory");
@@ -21,6 +23,7 @@ public class Inventory : MonoBehaviour {
 		instance = this;
 	}
 
+	// Add something to the inventory if there is room
 	public bool add(Item toAdd) {
 		if(items.Count >= slots) {
 			return false;
@@ -34,6 +37,7 @@ public class Inventory : MonoBehaviour {
 		return true;
 	}
 
+	// Remove someting from the inventory
 	public void remove(Item toRemove) {
 		items.Remove(toRemove);
 
@@ -42,6 +46,7 @@ public class Inventory : MonoBehaviour {
 		}
 	}
 
+	// Get the item in the inventory for the slot this is active
 	public Item getActiveItem() {
 		Debug.Log("Count: " + this.items.Count);
 		Debug.Log("Active Item: " + this.activeItem);
@@ -52,6 +57,7 @@ public class Inventory : MonoBehaviour {
 		return null;
 	}
 
+	// Set which slot is active
 	public void setActiveItem(int newActive) {
 		this.activeItem = newActive;
 	}

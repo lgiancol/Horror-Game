@@ -14,12 +14,8 @@ public class InventoryUI : MonoBehaviour {
 
 		slots = slotsParent.GetComponentsInChildren<InventorySlot>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+	// This is the method that is called whenever the inventory is updated
 	private void updateInventoryUI() {
 		Debug.Log("Updating the inventory UI");
 

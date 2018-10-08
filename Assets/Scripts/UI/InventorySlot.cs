@@ -6,6 +6,7 @@ public class InventorySlot : MonoBehaviour {
 	public RawImage icon;
 	public Item item;
 	
+	// Set the item for the current inventory slot
 	public void setItem(Item toAdd) {
 		this.item = toAdd;
 
@@ -13,6 +14,7 @@ public class InventorySlot : MonoBehaviour {
 		icon.enabled = true;
 	}
 
+	// Get rid of the item that is in the current slot
 	public void clearItem() {
 		this.item = null;
 
