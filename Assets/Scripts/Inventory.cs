@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 	public int slots = 5;
 	public List<Item> items = new List<Item>();
+	public int activeItem = 0;
 
 	public delegate void onItemChanged();
 	public onItemChanged onItemChangedCallback;
@@ -39,5 +40,19 @@ public class Inventory : MonoBehaviour {
 		if(onItemChangedCallback != null) {
 			onItemChangedCallback.Invoke();
 		}
+	}
+
+	public Item getActiveItem() {
+		Debug.Log("Count: " + this.items.Count);
+		Debug.Log("Active Item: " + this.activeItem);
+		if(this.items.Count > 0 && this.items.Count >= this.activeItem) {
+			return this.items[this.activeItem];
+		}
+
+		return null;
+	}
+
+	public void setActiveItem(int newActive) {
+		this.activeItem = newActive;
 	}
 }

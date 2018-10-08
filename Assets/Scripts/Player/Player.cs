@@ -5,14 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	public Camera cam;
 	public float radius = 2.0f;
-	public Inventory inventory;
-	// public GUI gui;
-
-	// Use this for initialization
-	void Start () {
-		inventory = GetComponent<Inventory>();
-		// gui.inventoryManager.updateInventory(inventory);
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,25 +20,15 @@ public class Player : MonoBehaviour {
 				}
 			}
 		} else if(Input.GetKeyDown("1")) {
-			// inventory.setActiveIndex(0);
+			Inventory.instance.setActiveItem(0);
 		} else if(Input.GetKeyDown("2")) {
-			// inventory.setActiveIndex(1);
+			Inventory.instance.setActiveItem(1);
 		} else if(Input.GetKeyDown("3")) {
-			// inventory.setActiveIndex(2);
+			Inventory.instance.setActiveItem(2);
 		} else if(Input.GetKeyDown("4")) {
-			// inventory.setActiveIndex(3);
+			Inventory.instance.setActiveItem(3);
 		} else if(Input.GetKeyDown("5")) {
-			// inventory.setActiveIndex(4);
+			Inventory.instance.setActiveItem(4);
 		}
-	}
-
-	public void addInventoryItem(Item toAdd) {
-		// inventory.addItem(toAdd);
-		// gui.inventoryManager.updateInventory(inventory);
-	}
-
-	public void removeActiveItem() {
-		// inventory.removeActiveItem();
-		// gui.inventoryManager.updateInventory(inventory);
 	}
 }

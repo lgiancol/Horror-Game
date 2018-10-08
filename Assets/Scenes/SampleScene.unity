@@ -1290,6 +1290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a59c004f3e741dfb78185fcba7cf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotsParent: {fileID: 24801281}
+  slots: []
 --- !u!1001 &1334524702
 Prefab:
   m_ObjectHideFlags: 0
@@ -1773,7 +1775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 534669904}
   radius: 2
-  inventory: {fileID: 0}
 --- !u!114 &1821475979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,6 +1788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots: 5
   items: []
+  activeItem: 0
 --- !u!1 &2137082501
 GameObject:
   m_ObjectHideFlags: 0
