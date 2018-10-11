@@ -23,6 +23,7 @@ public class FuseBox : InteractableItem {
 	}
 
 	public override void onInteract() {
+		this.onItemUndetected();
 		Item activeItem = inventory.getActiveItem();
 		
 		if(activeItem != null && activeItem.itemName == "Fuse") {
