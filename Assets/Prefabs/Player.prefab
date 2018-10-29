@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20200055029529710}
-  actionPanelUI: {fileID: 0}
 --- !u!114 &114356873760431208
 MonoBehaviour:
   m_ObjectHideFlags: 1
