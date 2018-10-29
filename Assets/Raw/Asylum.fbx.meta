@@ -4,12 +4,23 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Asylum
+    100004: Ceiling
     400000: //RootNode
+    400002: Asylum
+    400004: Ceiling
     2100000: No Name
     2300000: //RootNode
+    2300002: Asylum
+    2300004: Ceiling
     3300000: //RootNode
+    3300002: Asylum
+    3300004: Ceiling
     4300000: Asylum
+    4300002: Ceiling
     6400000: //RootNode
+    6400002: Asylum
+    6400004: Ceiling
   externalObjects: {}
   materials:
     importMaterials: 1
