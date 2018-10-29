@@ -5,16 +5,8 @@ using UnityEngine;
 public class Keypad : MonoBehaviour {
 	public string codeAnswer = "9654";
 	public string codeGuess = "";
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public bool isCorrect = false;
+	public Fuse fuse;
 
 	public void updateGuess(string newVal) {
 		codeGuess += newVal;
@@ -24,7 +16,8 @@ public class Keypad : MonoBehaviour {
 	private void checkGuess() {
 		if(codeGuess.Length == codeAnswer.Length) {
 			if(codeGuess == codeAnswer) {
-				Debug.Log("Figured it out");
+				isCorrect = true;
+				fuse.canInteract = true;
 			} else {
 				resetCodeGuess();
 			}
