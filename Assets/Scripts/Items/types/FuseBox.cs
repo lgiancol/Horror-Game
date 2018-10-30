@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FuseBox : InteractableItem {
 	public Transform fuseSlot;
+	public Gate gate;
 	private Inventory inventory;
 
 	void Start() {
@@ -13,6 +14,10 @@ public class FuseBox : InteractableItem {
 	}
 
 	private void checkHasFuse() {
+		// Don't check anything if this fuse box has already been used
+		if (!isActive) {
+			return;
+		}
 		this.canInteract = false;
 		for(int i = 0; i < inventory.items.Count; i++) {
 			if(inventory.items[i].itemName == "Fuse") {
@@ -30,9 +35,12 @@ public class FuseBox : InteractableItem {
 			GameObject fuse = Instantiate(activeItem.itemDropPrefab, fuseSlot, false);
 			fuse.GetComponent<InteractableItem>().isActive = false;
 
-			Inventory.instance.remove(activeItem);
+			inventory.remove(activeItem);
 
 			this.isActive = false;
+
+			// Grab the Gate script object from the gate and increment the fuses
+			gate.connectFuse();
 		}
 	}
 }
