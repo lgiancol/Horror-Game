@@ -60,7 +60,6 @@ public class ST_PuzzleTile : MonoBehaviour
 
 	public void ExecuteAdditionalMove()
 	{
-		Debug.Log("Execute additional move");
 		// get the puzzle display and return the new target location from this tile. 
 		LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
 	}
