@@ -7,6 +7,6 @@ public class EndTrigger : MonoBehaviour {
     {
         DataBase save = new DataBase();
         save.addPlayerData();
-        Debug.Log("Congradulations Mother Fucker!!");
+        Debug.Log("Congratulations! You have escaped!!");
     }
 }

@@ -36,7 +36,7 @@ public class DataBase {
     public void addPlayerData()
     {
 
-        playerData newPlayer = new playerData(200/*"Kushal", 1899, 22, 165*/);
+        playerData newPlayer = new playerData(2/*"Kushal", 1899, 22, 165*/);
         string jason = JsonUtility.ToJson(newPlayer);
 
         // Set up editor & get root reference location.
