@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Asylum.unity
     guid: 764e1f49deb35b547bfb18f4abfeddc4
+  - enabled: 1
+    path: Assets/Scenes/Cipher.unity
+    guid: 45e91571c5d3c411caafc5820d06e12b
   m_configObjects: {}
