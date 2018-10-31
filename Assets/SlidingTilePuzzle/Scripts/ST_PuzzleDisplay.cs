@@ -234,7 +234,8 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		if(Complete)
 		{
 			// Instantiate(keyGO, new Vector3(0.0f, 1.7f, 1.33f), Quaternion.Euler(-90.0f, 0.0f, 0.0f));
-			keyGO.active = true;
+			// keyGO.active = true;
+			keyGO.SetActive(true);
 		}
 
 		yield return null;

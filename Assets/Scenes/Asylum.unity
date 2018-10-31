@@ -1401,6 +1401,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc6445923ab84d4491faac38391778f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &680293064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1014773285576130, guid: 7dc6445923ab84d4491faac38391778f,
+    type: 2}
+  m_PrefabInternal: {fileID: 680293063}
 --- !u!1 &702923715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,8 +2243,7 @@ Prefab:
         type: 2}
       propertyPath: keyGO
       value: 
-      objectReference: {fileID: 1014773285576130, guid: 7dc6445923ab84d4491faac38391778f,
-        type: 2}
+      objectReference: {fileID: 680293064}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c55322a26f14d5498a3d952d75cc630, type: 2}
   m_IsPrefabAsset: 0
