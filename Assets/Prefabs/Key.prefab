@@ -127,5 +127,6 @@ MonoBehaviour:
   isActive: 1
   interactText: Press 'E' to pick up
   canInteract: 1
-  actionPanel: {fileID: 0}
+  actionPanel: {fileID: 114020968336950660, guid: 39d31b86260d745b08ad6823bdf3534c,
+    type: 2}
   item: {fileID: 11400000, guid: 52380f5a53587c347b9801de18bd5ca0, type: 2}

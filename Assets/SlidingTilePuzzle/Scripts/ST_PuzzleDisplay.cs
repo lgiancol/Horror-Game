@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class ST_PuzzleDisplay : MonoBehaviour 
 {
+	public GameObject keyGO;
+
 	// this puzzle texture.
 	public Texture PuzzleImage;
 
@@ -186,7 +188,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		TileDisplayArray[0,0].GetComponent<ST_PuzzleTile>().Active = false;
 		yield return new WaitForSeconds(1.0f);
 
-		for(int k = 0; k < 20; k++)
+		for(int k = 0; k < 2; k++)
 		{
 			// use random to position each puzzle section in the array delete the number once the space is filled.
 			for(int j = 0; j < Height; j++)
@@ -231,7 +233,8 @@ public class ST_PuzzleDisplay : MonoBehaviour
 		// if we are still complete then all the tiles are correct.
 		if(Complete)
 		{
-			
+			// Instantiate(keyGO, new Vector3(0.0f, 1.7f, 1.33f), Quaternion.Euler(-90.0f, 0.0f, 0.0f));
+			keyGO.active = true;
 		}
 
 		yield return null;
