@@ -21,4 +21,12 @@ public class Gate : MonoBehaviour {
             animator.SetTrigger("Interact");
         }
     }
+
+    public void disconnectFuse() {
+        fuseCount--;
+        if (fuseCount < fusesNeeded) {
+            // Close the gate since there aren't enough fuses
+            animator.SetTrigger("Interact");
+        }
+    }
 }

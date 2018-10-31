@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class Door : InteractableItem {
-    Animator animator;
+    protected Animator animator;
     
-    void Start () {
+    protected virtual void Start () {
         animator = GetComponent<Animator>();
     }
 
