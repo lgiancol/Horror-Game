@@ -21,7 +21,6 @@ public class FuseBox : InteractableItem {
 	}
 
 	private void checkHasFuse() {
-		Debug.Log(fuse);
 		// If there is a fuse in the box, then we can still remove it
 		if (fuse != null) {
 			canInteract = true;
