@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class FuseBox : InteractableItem {
 	public Transform fuseSlot;
+	public Gate gate;
 	private Inventory inventory;
+
+	// The fuse that will be connected
+	GameObject fuse;
+	// Also save the item that will be removed from and added to the inventory
+	Item fuseItem;
+	// Keep track of the old interact text
+	string oldInteractText;
 
 	void Start() {
 		inventory = Inventory.instance;
@@ -13,6 +21,12 @@ public class FuseBox : InteractableItem {
 	}
 
 	private void checkHasFuse() {
+		// If there is a fuse in the box, then we can still remove it
+		if (fuse != null) {
+			canInteract = true;
+			return;
+		}
+
 		this.canInteract = false;
 		for(int i = 0; i < inventory.items.Count; i++) {
 			if(inventory.items[i].itemName == "Fuse") {
@@ -26,13 +40,34 @@ public class FuseBox : InteractableItem {
 		this.onItemUndetected();
 		Item activeItem = inventory.getActiveItem();
 		
-		if(activeItem != null && activeItem.itemName == "Fuse") {
-			GameObject fuse = Instantiate(activeItem.itemDropPrefab, fuseSlot, false);
-			fuse.GetComponent<InteractableItem>().isActive = false;
+		if (fuse == null) {
+			// Check for a fuse to use if it isn't connected yet
+			if(activeItem != null && activeItem.itemName == "Fuse") {
+				fuse = Instantiate(activeItem.itemDropPrefab, fuseSlot, false);
+				fuse.GetComponent<InteractableItem>().isActive = false;
 
-			Inventory.instance.remove(activeItem);
+				inventory.remove(activeItem);
+				fuseItem = activeItem;
 
-			this.isActive = false;
+				oldInteractText = interactText;
+				interactText = "Press 'E' to remove the fuse";
+
+				// Grab the Gate script object from the gate and increment the fuses
+				gate.connectFuse();
+			}
+		} else {
+			// Take the fuse out of the box and back into the player's inventory
+			Destroy(fuse);
+			fuse = null;
+
+			// Add the fuse back to our inventory
+			inventory.add(fuseItem);
+			fuseItem = null;
+
+			interactText = oldInteractText;
+			oldInteractText = null;
+
+			gate.disconnectFuse();
 		}
 	}
 }
