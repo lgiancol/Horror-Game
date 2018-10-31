@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "655450115279",
+    "firebase_url": "https://goons-13756.firebaseio.com",
+    "project_id": "goons-13756",
+    "storage_bucket": "goons-13756.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655450115279:android:10ca9291a6d8d298",
+        "android_client_info": {
+          "package_name": "goons.horrorGame.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655450115279-8hqtdf1hsi2lfijh6ukrarcg372pdm7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm4d0SYMf01E2XuvkIS081Hkq-2-bLeCs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
