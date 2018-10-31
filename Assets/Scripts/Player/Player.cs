@@ -44,7 +44,6 @@ public class Player : MonoBehaviour {
 				if(temp != null) {
 					// get the puzzle display and return the new target location from this tile. 
 					temp.LaunchPositionCoroutine(GameObject.Find("Slide Puzzle").GetComponent<ST_PuzzleDisplay>().GetTargetLocation(temp));
-					Debug.Log("Found a puzzle piece: " + temp);
 				}
 			}
 		}
