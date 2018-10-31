@@ -5,13 +5,14 @@ public class ST_PuzzleTile : MonoBehaviour
 {
 	// the target position for this tile.
 	public Vector3 TargetPosition;
+	public Camera cam;
 
 	// is this an active tile?  usually one per game is inactive.
 	public bool Active = true;
 
 	// is this tile in the correct location?
 	public bool CorrectLocation = false;
-
+//
 	// store this tiles array location.
 	public Vector2 ArrayLocation = new Vector2();
 	public Vector2 GridLocation = new Vector2();
@@ -65,7 +66,8 @@ public class ST_PuzzleTile : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		// get the puzzle display and return the new target location from this tile. 
 		LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
+		
+		
 	}
 }
