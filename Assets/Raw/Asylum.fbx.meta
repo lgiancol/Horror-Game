@@ -6,21 +6,123 @@ ModelImporter:
     100000: //RootNode
     100002: Asylum
     100004: Ceiling
+    100006: Door-B
+    100008: Door-B-Hinges
+    100010: Door-BEntry
+    100012: Door-BEntry-Hinges
+    100014: Door-Crypt
+    100016: Door-Crypt-Hinges
+    100018: Door-End
+    100020: Door-End-Hinges
+    100022: Door-Riddle
+    100024: Door-Riddle-Hinges
+    100026: Door-SewUp
+    100028: Door-SewUp-Hinges
+    100030: Fusebox1
+    100032: Fusebox2-1
+    100034: Fusebox2-2
+    100036: Gate1
+    100038: Gate2
     400000: //RootNode
     400002: Asylum
     400004: Ceiling
+    400006: Door-B
+    400008: Door-B-Hinges
+    400010: Door-BEntry
+    400012: Door-BEntry-Hinges
+    400014: Door-Crypt
+    400016: Door-Crypt-Hinges
+    400018: Door-End
+    400020: Door-End-Hinges
+    400022: Door-Riddle
+    400024: Door-Riddle-Hinges
+    400026: Door-SewUp
+    400028: Door-SewUp-Hinges
+    400030: Fusebox1
+    400032: Fusebox2-1
+    400034: Fusebox2-2
+    400036: Gate1
+    400038: Gate2
     2100000: No Name
     2300000: //RootNode
     2300002: Asylum
     2300004: Ceiling
+    2300006: Door-B
+    2300008: Door-B-Hinges
+    2300010: Door-BEntry
+    2300012: Door-BEntry-Hinges
+    2300014: Door-Crypt
+    2300016: Door-Crypt-Hinges
+    2300018: Door-End
+    2300020: Door-End-Hinges
+    2300022: Door-Riddle
+    2300024: Door-Riddle-Hinges
+    2300026: Door-SewUp
+    2300028: Door-SewUp-Hinges
+    2300030: Fusebox1
+    2300032: Fusebox2-1
+    2300034: Fusebox2-2
+    2300036: Gate1
+    2300038: Gate2
     3300000: //RootNode
     3300002: Asylum
     3300004: Ceiling
+    3300006: Door-B
+    3300008: Door-B-Hinges
+    3300010: Door-BEntry
+    3300012: Door-BEntry-Hinges
+    3300014: Door-Crypt
+    3300016: Door-Crypt-Hinges
+    3300018: Door-End
+    3300020: Door-End-Hinges
+    3300022: Door-Riddle
+    3300024: Door-Riddle-Hinges
+    3300026: Door-SewUp
+    3300028: Door-SewUp-Hinges
+    3300030: Fusebox1
+    3300032: Fusebox2-1
+    3300034: Fusebox2-2
+    3300036: Gate1
+    3300038: Gate2
     4300000: Asylum
     4300002: Ceiling
+    4300004: Door-End
+    4300006: Door-End-Hinges
+    4300008: Door-Crypt
+    4300010: Door-Crypt-Hinges
+    4300012: Door-Riddle
+    4300014: Door-Riddle-Hinges
+    4300016: Door-SewUp
+    4300018: Door-SewUp-Hinges
+    4300020: Door-BEntry
+    4300022: Door-BEntry-Hinges
+    4300024: Door-B
+    4300026: Door-B-Hinges
+    4300028: Gate2
+    4300030: Fusebox2-2
+    4300032: Fusebox2-1
+    4300034: Gate1
+    4300036: Fusebox1
     6400000: //RootNode
     6400002: Asylum
     6400004: Ceiling
+    6400006: Door-B
+    6400008: Door-B-Hinges
+    6400010: Door-BEntry
+    6400012: Door-BEntry-Hinges
+    6400014: Door-Crypt
+    6400016: Door-Crypt-Hinges
+    6400018: Door-End
+    6400020: Door-End-Hinges
+    6400022: Door-Riddle
+    6400024: Door-Riddle-Hinges
+    6400026: Door-SewUp
+    6400028: Door-SewUp-Hinges
+    6400030: Fusebox1
+    6400032: Fusebox2-1
+    6400034: Fusebox2-2
+    6400036: Gate1
+    6400038: Gate2
   externalObjects: {}
   materials:
     importMaterials: 1
