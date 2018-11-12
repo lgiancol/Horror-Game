@@ -8,6 +8,7 @@ public class Laser : MonoBehaviour {
 	private int numReflections = 0;
 	public float maxStepDistance = 1000f;
 	private LineRenderer laser;
+	public Sensor sensor;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +46,8 @@ public class Laser : MonoBehaviour {
 
 		// If we hit something, find the position of where we hit, and get the direction so we can properly figure out the next line
 		if(Physics.Raycast(ray, out hit, maxStepDistance)) {
-			fromPos = hit.point; // This point is calculated using the direction that was given originally
+			// We hit something so no matter what we need this variable so we can add another point
+			fromPos = hit.point;
 
 			// If we are hitting the player or we are not hitting a mirror, add one more point and return
 			if(hit.collider.GetComponent<Player>() || !hit.collider.GetComponent<Mirror>()) {
@@ -55,6 +57,14 @@ public class Laser : MonoBehaviour {
 				//  (Like if the player walks in front of the laser at the beginning but it
 				//  was reflecting off many things before that happened)
 				laser.positionCount = numReflections;
+
+				// After we add the final point, we need to check if the point we added to was the sensor
+				// If it was, we want to activate the sensor
+				if(hit.collider.GetComponent<Sensor>()) {
+					sensor.activate();
+				} else {
+					sensor.deactivate();
+				}
 
 				return;
 			}
