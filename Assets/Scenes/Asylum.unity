@@ -643,8 +643,9 @@ GameObject:
   - component: {fileID: 147817857}
   - component: {fileID: 147817856}
   - component: {fileID: 147817855}
+  - component: {fileID: 147817858}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: End Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,6 +683,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: -14.913001, z: 0}
+--- !u!114 &147817858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 147817854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44634b53266fe4711850799e5f775fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &161261401
 Prefab:
   m_ObjectHideFlags: 0
