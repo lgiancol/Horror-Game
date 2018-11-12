@@ -48,8 +48,13 @@ public class Laser : MonoBehaviour {
 			fromPos = hit.point; // This point is calculated using the direction that was given originally
 
 			// If we are hitting the player or we are not hitting a mirror, add one more point and return
-			if(hit.collider.gameObject.GetComponent<Player>() != null || hit.collider.transform.parent.GetComponent<Mirror>() == null) {
+			if(hit.collider.GetComponent<Player>() || !hit.collider.GetComponent<Mirror>()) {
 				addPoint(fromPos);
+
+				// There might be another point that was in before but shouldn't be in now
+				//  (Like if the player walks in front of the laser at the beginning but it
+				//  was reflecting off many things before that happened)
+				laser.positionCount = numReflections;
 
 				return;
 			}
