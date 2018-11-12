@@ -10,7 +10,7 @@ public class Sensor : MonoBehaviour {
 		if(!this.isActivated) {
 			this.isActivated = true;
 			Debug.Log("Sensor active");
-			activatesGo.GetComponent<Animator>().SetTrigger("Interact");
+			activatesGo.GetComponent<Animator>().SetBool("isOpen", true);
 		}
 	}
 
@@ -18,7 +18,7 @@ public class Sensor : MonoBehaviour {
 		if(this.isActivated) {
 			this.isActivated = false;
 			Debug.Log("Sensor is no longer active");
-			activatesGo.GetComponent<Animator>().SetTrigger("Interact");
+			activatesGo.GetComponent<Animator>().SetBool("isOpen", false);
 		}
 	}
 
