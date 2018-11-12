@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Sensor : MonoBehaviour {
 	private bool isActivated = false;
+	public GameObject activatesGo;
 
 	public void activate() {
 		if(!this.isActivated) {
 			this.isActivated = true;
 			Debug.Log("Sensor active");
+			activatesGo.GetComponent<Animator>().SetTrigger("Interact");
 		}
 	}
 
@@ -16,6 +18,7 @@ public class Sensor : MonoBehaviour {
 		if(this.isActivated) {
 			this.isActivated = false;
 			Debug.Log("Sensor is no longer active");
+			activatesGo.GetComponent<Animator>().SetTrigger("Interact");
 		}
 	}
 
