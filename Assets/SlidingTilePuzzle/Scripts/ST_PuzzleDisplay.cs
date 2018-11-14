@@ -196,7 +196,7 @@ public class ST_PuzzleDisplay : MonoBehaviour
 				for(int i = 0; i < Width; i++)
 				{		
 					// attempt to execute a move for this tile.
-					TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().ExecuteAdditionalMove();
+					TileDisplayArray[i,j].GetComponent<ST_PuzzleTile>().OnMouseDown();
 
 					yield return new WaitForSeconds(0.02f);
 				}

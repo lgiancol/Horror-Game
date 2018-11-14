@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour {
 		return true;
 	}
 
-	// Remove someting from the inventory
+	// Remove something from the inventory
 	public void remove(Item toRemove) {
 		items.Remove(toRemove);
 
