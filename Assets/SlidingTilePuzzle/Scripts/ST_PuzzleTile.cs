@@ -58,16 +58,14 @@ public class ST_PuzzleTile : MonoBehaviour
 		yield return null;
 	}
 
-	public void ExecuteAdditionalMove()
-	{
+	//public void ExecuteAdditionalMove()
+	//{
 		// get the puzzle display and return the new target location from this tile. 
-		LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
-	}
+	//	LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
+	//}
 
-	// void OnMouseDown()
-	// {
-	// 	LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));
-		
-		
-	// }
+    public void OnMouseDown()
+	{
+	    LaunchPositionCoroutine(this.transform.parent.GetComponent<ST_PuzzleDisplay>().GetTargetLocation(this.GetComponent<ST_PuzzleTile>()));	
+	}
 }
