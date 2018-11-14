@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00016647694, y: 0.59068626, z: -0.1146754}
+  m_LocalPosition: {x: 15.845841, y: 6.48, z: -2.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -257,7 +257,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114693821550730178
 MonoBehaviour:
@@ -273,6 +273,5 @@ MonoBehaviour:
   isActive: 1
   interactText: Press 'E' to pick up Head!
   canInteract: 1
-  actionPanel: {fileID: 114020968336950660, guid: 39d31b86260d745b08ad6823bdf3534c,
-    type: 2}
+  actionPanel: {fileID: 0}
   item: {fileID: 11400000, guid: f266a109ce85b46aeb28aead0d97e0dd, type: 2}
