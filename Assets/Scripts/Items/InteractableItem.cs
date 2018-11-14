@@ -17,4 +17,9 @@ public class InteractableItem : MonoBehaviour {
 	public virtual void onItemUndetected() {
 		actionPanel.resetActionText();
 	}
+
+	public void setActionText(string newText) {
+		this.interactText = newText;
+		actionPanel.setActionText(this.interactText);
+	}
 }

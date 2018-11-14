@@ -8,11 +8,12 @@ public class Laser : MonoBehaviour {
 	private int numReflections = 0;
 	public float maxStepDistance = 1000f;
 	private LineRenderer laser;
+	public Sensor sensor;
 
 	// Use this for initialization
 	void Start () {
 		laser = GetComponentInChildren<LineRenderer>();
-		laser.positionCount = maxReflections + 1; // Make sure there are enough verticies to keep up with the number of lines we want
+		laser.positionCount = 0; // Make sure there are enough verticies to keep up with the number of lines we want
 	}
 	
 	// Update is called once per frame
@@ -28,6 +29,7 @@ public class Laser : MonoBehaviour {
 	private void redrawLaser() {
 		// Reset the first node since we might be moving it
 		numReflections = 0;
+		// laser.positionCount = 0;
 		addPoint(this.transform.position);
 
 		// Draw the rest of the nodes based on this position
@@ -44,10 +46,31 @@ public class Laser : MonoBehaviour {
 
 		// If we hit something, find the position of where we hit, and get the direction so we can properly figure out the next line
 		if(Physics.Raycast(ray, out hit, maxStepDistance)) {
-			fromPos = hit.point; // This point is calculated using the direction that was given originally
+			// We hit something so no matter what we need this variable so we can add another point
+			fromPos = hit.point;
+
+			// If we are hitting the player or we are not hitting a mirror, add one more point and return
+			if(hit.collider.GetComponent<Player>() || !hit.collider.GetComponent<Mirror>()) {
+				addPoint(fromPos);
+
+				// There might be another point that was in before but shouldn't be in now
+				//  (Like if the player walks in front of the laser at the beginning but it
+				//  was reflecting off many things before that happened)
+				laser.positionCount = numReflections;
+
+				// After we add the final point, we need to check if the point we added to was the sensor
+				// If it was, we want to activate the sensor
+				if(hit.collider.GetComponent<Sensor>()) {
+					sensor.activate();
+				} else {
+					sensor.deactivate();
+				}
+
+				return;
+			}
 			direction = Vector3.Reflect(direction, hit.normal);
 		} else {
-			fromPos += direction * maxStepDistance;
+			fromPos += direction * maxStepDistance; // Add a new point to the laser (straight line)
 		}
 
 		// Actually add the new point
@@ -57,7 +80,13 @@ public class Laser : MonoBehaviour {
 	}
 
 	private void addPoint(Vector3 position) {
-		laser.SetPosition(numReflections, position);
-		numReflections++;
+		// If we are trying to add a point that doesn't already exist, we need to add a new point first
+		if(numReflections >= laser.positionCount) laser.positionCount++;
+
+		// If the current number of points is less than the maximum number of reflections, add another reflection
+		if(laser.positionCount < maxReflections) {
+			laser.SetPosition(numReflections, position);
+			numReflections++;
+		}
 	}
 }
