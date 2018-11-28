@@ -24,6 +24,10 @@ ModelImporter:
     100036: Gate1
     100038: Gate2
     100040: Gates
+    100042: Basement
+    100044: Floor-Basement
+    100046: Floor-Main
+    100048: Stairs
     400000: //RootNode
     400002: Asylum
     400004: Ceiling
@@ -45,8 +49,18 @@ ModelImporter:
     400036: Gate1
     400038: Gate2
     400040: Gates
+    400042: Basement
+    400044: Floor-Basement
+    400046: Floor-Main
+    400048: Stairs
     2100000: No Name
     2100002: Gates
+    2100004: Basement
+    2100006: Stairs
+    2100008: Floor-Basement
+    2100010: Material
+    2100012: Asylum
+    2100014: Ceiling
     2300000: //RootNode
     2300002: Asylum
     2300004: Ceiling
@@ -68,6 +82,10 @@ ModelImporter:
     2300036: Gate1
     2300038: Gate2
     2300040: Gates
+    2300042: Basement
+    2300044: Floor-Basement
+    2300046: Floor-Main
+    2300048: Stairs
     3300000: //RootNode
     3300002: Asylum
     3300004: Ceiling
@@ -89,6 +107,10 @@ ModelImporter:
     3300036: Gate1
     3300038: Gate2
     3300040: Gates
+    3300042: Basement
+    3300044: Floor-Basement
+    3300046: Floor-Main
+    3300048: Stairs
     4300000: Asylum
     4300002: Ceiling
     4300004: Door-End
@@ -109,6 +131,10 @@ ModelImporter:
     4300034: Gate1
     4300036: Fusebox1
     4300038: Gates
+    4300040: Basement
+    4300042: Stairs
+    4300044: Floor-Basement
+    4300046: Floor-Main
     6400000: //RootNode
     6400002: Asylum
     6400004: Ceiling
@@ -130,6 +156,10 @@ ModelImporter:
     6400036: Gate1
     6400038: Gate2
     6400040: Gates
+    6400042: Basement
+    6400044: Floor-Basement
+    6400046: Floor-Main
+    6400048: Stairs
   externalObjects: {}
   materials:
     importMaterials: 1
