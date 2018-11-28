@@ -20,6 +20,7 @@ public class Keypad : MonoBehaviour {
 		if(codeGuess.Length == codeAnswer.Length) {
 			if(codeGuess == codeAnswer) {
 				isCorrect = true;
+				fuse.gameObject.SetActive(true);
 				fuse.canInteract = true;
 				codeInput.color = Color.green;
 			} else {
