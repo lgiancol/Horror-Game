@@ -72,11 +72,11 @@ public class Lightning : MonoBehaviour {
 
 				// After we add the final point, we need to check if the point we added to was the sensor
 				// If it was, we want to activate the sensor
-				if(hit.collider.GetComponent<Sensor>()) {
-					sensor.activate();
-				} else {
-					sensor.deactivate();
-				}
+				// if(hit.collider.GetComponent<Sensor>()) {
+				// 	sensor.activate();
+				// } else {
+				// 	sensor.deactivate();
+				// }
 
 				return;
 			}
@@ -102,4 +102,3 @@ public class Lightning : MonoBehaviour {
 		}
 	}
 }
-
