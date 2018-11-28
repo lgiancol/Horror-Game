@@ -11,7 +11,7 @@ public class EndDoor : Door {
 	private bool done = false;
 	public Fade fade;
 
-	void Start() {
+	new void Start() {
 		endAudio = GetComponent<AudioSource>();
 	}
 
