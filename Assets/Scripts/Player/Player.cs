@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0)) {
 			Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 			RaycastHit hit;
-			if(Physics.Raycast(ray, out hit, 2.0f)) {
+			if(Physics.Raycast(ray, out hit, 0.1f)) {
 				ST_PuzzleTile temp = hit.collider.GetComponent<ST_PuzzleTile>();
 
 				// Call detectedItem.onFocus() or whatever so that updates the UI instead of the player class
