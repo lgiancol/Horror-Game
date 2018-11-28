@@ -2,11 +2,18 @@
 
 
 public class EndTrigger : MonoBehaviour {
+    private AudioSource pickDoor;
+
+
+    void Start() {
+        pickDoor = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter()
     {
         DataBase save = new DataBase();
         save.addPlayerData();
-        Debug.Log("Congratulations! You have escaped!!");
+        
+        pickDoor.Play();
     }
 }
