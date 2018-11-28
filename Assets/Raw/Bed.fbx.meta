@@ -1,33 +1,31 @@
 fileFormatVersion: 2
-guid: 4e45ef960b1493b47a04735dfb111eec
+guid: d4beaac92b7762e4d9105d05a56bd007
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: DoorKnobs
-    100004: Hinges
+    100002: Bedframe
+    100004: Matress
+    100006: Pillow
     400000: //RootNode
-    400002: DoorKnobs
-    400004: Hinges
-    2100000: No Name
-    2100002: Door
-    2100004: DoorKnobs
-    2100006: Hinges
-    2300000: //RootNode
-    2300002: DoorKnobs
-    2300004: Hinges
-    3300000: //RootNode
-    3300002: DoorKnobs
-    3300004: Hinges
-    4300000: Door
-    4300002: DoorKnobs
-    4300004: Hinges
-    7400000: Door|DoorAction
-    7400002: Door|DoorAction.001
-    7400004: Door|DoorSwing
-    7400006: DoorKnobs|DoorSwing
-    7400008: Hinges|DoorSwing
-    9500000: //RootNode
+    400002: Bedframe
+    400004: Matress
+    400006: Pillow
+    2100000: Pillow
+    2100002: Matress
+    2100004: Bedframe
+    2300000: Bedframe
+    2300002: Matress
+    2300004: Pillow
+    3300000: Bedframe
+    3300002: Matress
+    3300004: Pillow
+    4300000: Pillow
+    4300002: Matress
+    4300004: Bedframe
+    6400000: Bedframe
+    6400002: Matress
+    6400004: Pillow
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -61,7 +59,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -79,8 +77,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -105,7 +103,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
